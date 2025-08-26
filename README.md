@@ -11,8 +11,15 @@ Participantes do projeto:
 
 ## Gerador de Currículo Inteligente com Preview em Tempo Real
 
-Esse projeto permite que os usuarios possam realizar de forma online um Curriculo Inteligente, em que ao mesmo tempo consigo ver a previa do curriculo pronto.
+Esse projeto permite que os usuarios elaborem de forma online um Curriculo Inteligente, em que ao mesmo tempo consiga ver a previa do curriculo pronto.
 
 ____________________________________________________________________________________________
+## Objetivo do projeto
+
+Colocar em prática, as tecnologias que aprendemos em sala de aula:
+_React 19_ + _TypeScript_ + _TailwindCSS v4_ + _Vite_
+
+______________________________________________________________________________________________
+
 
 
