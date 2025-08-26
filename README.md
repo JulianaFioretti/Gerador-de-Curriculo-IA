@@ -32,7 +32,7 @@ ________________________________________________________________________________
 **• Design Profissional** - Interface clean e moderna
 
 ____________________________________________________________________________________________
-##Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 Como mencionado anteriormente utilizaremos as tecnologias que aprendemos em sala de aula:
 
@@ -43,4 +43,42 @@ Como mencionado anteriormente utilizaremos as tecnologias que aprendemos em sala
 -`TailwindCSS v4:` Framework CSS "utility-first" para estilizar componentes de forma rápida e direta.
 
 -`Vite:` Ferramenta de build extremamente rápida para iniciar e desenvolver projetos web modernos.
+
+_____________________________________________________________________________________________
+
+## Estrutura do Projeto
+
+src/
+├── App.tsx
+├── components/
+│ ├── Layout/
+│ │ ├── FormSection.tsx
+│ │ └── PreviewSection.tsx
+│ ├── Form/
+│ │ ├── PersonalInfo.tsx
+│ │ ├── Skills.tsx
+│ │ ├── Experience.tsx
+│ │ └── AIEnhanceButton.tsx
+│ ├── Preview/
+│ │ ├── CVPreview.tsx
+│ │ ├── PersonalHeader.tsx
+│ │ ├── SkillsSection.tsx
+│ │ └── ExperienceSection.tsx
+│ └── UI/
+│ ├── LoadingSpinner.tsx
+│ ├── ErrorBoundary.tsx
+│ └── Toast.tsx
+├── services/
+│ └── aiService.ts
+├── hooks/
+│ ├── useCVData.ts
+│ ├── useAIEnhancement.ts
+│ └── useToast.ts
+├── utils/
+│ ├── validation.ts
+│ └── textProcessing.ts
+├── types/
+│ ├── cv.types.ts
+│ └── api.types.ts
+└── index.css
 
