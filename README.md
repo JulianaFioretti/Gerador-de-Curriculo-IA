@@ -1,6 +1,7 @@
 <h1 align="center">Gerador de Curriculo IA </h1>
 
 Repositorio criado para o Projeto do Gerador Inteligente de Currículos com IA.
+______________________________________________________________________________________________
 
 
 Participantes do projeto:
