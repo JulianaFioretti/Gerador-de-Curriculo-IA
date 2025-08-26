@@ -4,7 +4,7 @@ Repositorio criado para o Projeto do Gerador Inteligente de Currículos com IA.
 ______________________________________________________________________________________________
 
 
- ###👥 Participantes do projeto:
+ ### 👥 Participantes do projeto:
  
 * Geraldo George Trindade Costa 
 * Lilian Mendes Silva dos Santos 
