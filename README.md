@@ -23,10 +23,10 @@ ________________________________________________________________________________
 
 ## Funcionalidades
 
-**• Preview Instantâneo** - *Mudanças aparecem em tempo real*
-**• Listas Dinâmicas** - *Adicionar/remover habilidades e experiências*
-**• Layout Desktop** - *Interface otimizada para desktop*
-**• Design Profissional** - *Interface clean e moderna*
+**• Preview Instantâneo** - *Mudanças aparecem em tempo real
+**• Listas Dinâmicas** - *Adicionar/remover habilidades e experiências
+**• Layout Desktop** - *Interface otimizada para desktop
+**• Design Profissional** - *Interface clean e moderna
 
 ____________________________________________________________________________________________
 
