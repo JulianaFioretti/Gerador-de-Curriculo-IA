@@ -17,9 +17,17 @@ ________________________________________________________________________________
 ## Objetivo do projeto
 
 Colocar em prática, as tecnologias que aprendemos em sala de aula:
-_React 19_ + _TypeScript_ + _TailwindCSS v4_ + _Vite_
+_React 19_ + _TypeScript_ + _TailwindCSS v4_ + _Vite_ .
 
 ______________________________________________________________________________________________
 
+## Funcionalidades
+
+**• Preview Instantâneo** - *Mudanças aparecem em tempo real*
+**• Listas Dinâmicas** - *Adicionar/remover habilidades e experiências*
+**• Layout Desktop** - *Interface otimizada para desktop*
+**• Design Profissional** - *Interface clean e moderna*
+
+____________________________________________________________________________________________
 
 
