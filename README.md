@@ -32,5 +32,15 @@ ________________________________________________________________________________
 **• Design Profissional** - Interface clean e moderna
 
 ____________________________________________________________________________________________
+##Tecnologias Utilizadas
 
+Como mencionado anteriormente utilizaremos as tecnologias que aprendemos em sala de aula:
+
+*React 19: Biblioteca JavaScript para criar interfaces de usuário dinâmicas e reativas.
+
+*TypeScript: Superconjunto do JavaScript que adiciona tipagem estática para maior segurança e organização do código.
+
+*TailwindCSS v4: Framework CSS "utility-first" para estilizar componentes de forma rápida e direta.
+
+*Vite: Ferramenta de build extremamente rápida para iniciar e desenvolver projetos web modernos.
 
