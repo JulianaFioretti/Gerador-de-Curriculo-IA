@@ -1,10 +1,11 @@
-<h1 align="center"> 📄Gerador de Curriculo IA </h1>
+<h1 align="center"> 📄Gerador de Curriculo IA 🤖 </h1>
 
 Repositorio criado para o Projeto do Gerador Inteligente de Currículos com IA.
 ______________________________________________________________________________________________
 
 
-Participantes do projeto:
+ ###👥 Participantes do projeto:
+ 
 * Geraldo George Trindade Costa 
 * Lilian Mendes Silva dos Santos 
 * Juliana Cristina Alves Fioretti
@@ -14,14 +15,14 @@ Participantes do projeto:
 Esse projeto permite que os usuarios elaborem de forma online um Curriculo Inteligente, em que ao mesmo tempo consiga ver a previa do curriculo pronto.
 
 ____________________________________________________________________________________________
- ##:selfie: Objetivo do projeto
+ ## 🗨 Objetivo do projeto
 
 Colocar em prática, as tecnologias que aprendemos em sala de aula:
 _React 19_ + _TypeScript_ + _TailwindCSS v4_ + _Vite_ .
 
 ______________________________________________________________________________________________
 
-## Funcionalidades
+## 🤳 Funcionalidades
 
 **• Preview Instantâneo** - Mudanças aparecem em tempo real
 
@@ -32,7 +33,7 @@ ________________________________________________________________________________
 **• Design Profissional** - Interface clean e moderna
 
 ____________________________________________________________________________________________
-## Tecnologias Utilizadas
+## 👩‍💻Tecnologias Utilizadas
 
 Como mencionado anteriormente utilizaremos as tecnologias que aprendemos em sala de aula:
 
@@ -46,7 +47,7 @@ Como mencionado anteriormente utilizaremos as tecnologias que aprendemos em sala
 
 _____________________________________________________________________________________________
 
-## Estrutura do Projeto
+## 👾 Estrutura do Projeto
 
 src/
 
