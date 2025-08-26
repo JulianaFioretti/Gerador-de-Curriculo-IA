@@ -18,6 +18,7 @@ ________________________________________________________________________________
  ## 🗨 Objetivo do projeto
 
 Colocar em prática, as tecnologias que aprendemos em sala de aula:
+
 _React 19_ + _TypeScript_ + _TailwindCSS v4_ + _Vite_ .
 
 ______________________________________________________________________________________________
