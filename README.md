@@ -1,6 +1,6 @@
 <h1 align="center"> 📄Gerador de Curriculo IA 🤖 </h1>
 
-Repositorio criado para o Projeto do Gerador Inteligente de Currículos com IA.
+Repositório criado para o Projeto do Gerador Inteligente de Currículos com IA.
 ______________________________________________________________________________________________
 
 
@@ -50,71 +50,6 @@ Como mencionado anteriormente utilizaremos as tecnologias que aprendemos em sala
 
 _____________________________________________________________________________________________
 
-## 👾 Estrutura do Projeto
+## 👾 Manual do Projeto
 
-src/
-
-├── App.tsx
-
-├── components/
-
-│ ├── Layout/
-
-│ │ ├── FormSection.tsx
-
-│ │ └── PreviewSection.tsx
-
-│ ├── Form/
-
-│ │ ├── PersonalInfo.tsx
-
-│ │ ├── Skills.tsx
-
-│ │ ├── Experience.tsx
-
-│ │ └── AIEnhanceButton.tsx
-
-│ ├── Preview/
-
-│ │ ├── CVPreview.tsx
-
-│ │ ├── PersonalHeader.tsx
-
-│ │ ├── SkillsSection.tsx
-
-│ │ └── ExperienceSection.tsx
-
-│ └── UI/
-
-│ ├── LoadingSpinner.tsx
-
-│ ├── ErrorBoundary.tsx
-
-│ └── Toast.tsx
-
-├── services/
-
-│ └── aiService.ts
-
-├── hooks/
-
-│ ├── useCVData.ts
-
-│ ├── useAIEnhancement.ts
-
-│ └── useToast.ts
-
-├── utils/
-
-│ ├── validation.ts
-
-│ └── textProcessing.ts
-
-├── types/
-
-│ ├── cv.types.ts
-
-│ └── api.types.ts
-
-└── index.css
-
+- [Manual do Projeto](docs/manual-do-projeto.md)
