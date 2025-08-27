@@ -9,8 +9,8 @@ ________________________________________________________________________________
 * Geraldo George Trindade Costa 
 * Lilian Mendes Silva dos Santos 
 * Juliana Cristina Alves Fioretti
-* Edmilson
-* Christal
+* Edmilson Junior
+* Christal Camillo
 
 ## Gerador de Currículo Inteligente com Preview em Tempo Real
 
