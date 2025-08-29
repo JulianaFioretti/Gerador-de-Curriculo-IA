@@ -1,18 +1,19 @@
-import React from 'react';
 import FormSection from './components/Layout/FormSection';
 import PreviewSection from './components/Layout/PreviewSection';
-
 import './index.css'
 
-// Standard functional component with TypeScript
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="flex h-screen">
-
-		  <FormSection /> 
-		  <PreviewSection />
+    <div className="flex w-full">
+      <div className="flex-1 max-w-1/2 border-r border-gray-200">
+        <FormSection />
+      </div>
+      <div className="flex-1 max-w-1/2">
+        <PreviewSection />
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
+
