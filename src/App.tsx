@@ -4,11 +4,12 @@ import './index.css'
 
 function App() {
   return (
-    <div className="flex w-full">
-      <div className="flex-1 max-w-1/2 border-r border-gray-200">
+    <div className="flex w-full h-full max-h-full">
+      {/* overflow-auto permite auto scroll */}
+      <div className="flex-1 max-w-1/2 max-h-full border-r overflow-auto border-gray-200">
         <FormSection />
       </div>
-      <div className="flex-1 max-w-1/2">
+      <div className="flex-1 max-w-1/2 max-h-full overflow-auto">
         <PreviewSection />
       </div>
     </div>
