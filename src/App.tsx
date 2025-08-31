@@ -2,6 +2,7 @@ import FormSection from './components/Layout/FormSection';
 import PreviewSection from './components/Layout/PreviewSection';
 import './index.css'
 
+
 function App() {
   return (
     <div className="flex w-full h-full max-h-full">
