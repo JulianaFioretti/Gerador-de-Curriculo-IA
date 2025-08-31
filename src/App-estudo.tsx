@@ -1,3 +1,12 @@
+/*
+	Esta página é um exemplo de um aplicativo React simples para revisão e estudo.
+	Este código é totalmente independente das páginas do projeto Gerador de Currículo.
+	Ele demonstra como usar componentes funcionais e hooks.
+	Além disso, ilustra como gerenciar estado e eventos em um formulário.
+	Todas as funções e css (inline e global) estão nesta mesma página para facilitar a compreensão.
+				***** @LilianMS
+*/
+
 import { useState } from 'react'
 import codificaiLogo from './assets/logo_codificai_b.png'
 
@@ -50,7 +59,7 @@ function App() {
 					<img src={codificaiLogo} className="logo" alt="Codificaí logo" />
 				</a>
 			</div>
-			
+
 			<h1>Codificaí App</h1>
 
 			<form className="formTest" onSubmit={handleSubmit} autoComplete="off">
