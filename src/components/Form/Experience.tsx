@@ -1,11 +1,11 @@
 
-function PersonalInfo() {
+function Experience() {
 	return (
 		<>
-			<h2>Informações Pessoais</h2>
+			<h2> Experiências Profissionais</h2>
 			
 		</>
 	)
 }
 
-export default PersonalInfo
+export default Experience
