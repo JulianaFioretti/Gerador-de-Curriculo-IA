@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
-import type { Experience } from "../types/cv.types";
-import { CVContext } from '../App';
-import './Form/PersonalInfo.css';
+import type { Experience } from "../../types/cv.types";
+import { CVContext } from '../../App';
+import './PersonalInfo.css';
 
 const ExperienceInput: React.FC = () => {
   const { state, setState } = useContext(CVContext);

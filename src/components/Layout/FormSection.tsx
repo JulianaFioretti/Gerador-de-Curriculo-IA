@@ -1,7 +1,7 @@
 
 import PersonalInfo from '../Form/PersonalInfo'
 import Skills from '../Form/Skills'
-import ExperienceInput from '../ExperienceInput';
+import ExperienceInput from '../Form/ExperienceInput';
 
 function FormSection() {
 	return (
