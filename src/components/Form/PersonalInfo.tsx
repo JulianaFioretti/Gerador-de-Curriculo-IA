@@ -44,7 +44,7 @@ function PersonalInfo() {
   }, [resumeValue]);
 
   return (
-    <div className="form-container bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+  <div className="form-container bg-white p-6 rounded-lg shadow-md max-w-3xl w-full mx-auto">
       <p className="text-sm text-slate-500 mb-6">Informações básicas para contato</p>
       <form onSubmit= {handleSubmit(onSubmit)}>
         {/* ...restante do código do formulário... */}
