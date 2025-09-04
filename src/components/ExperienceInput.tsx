@@ -1,94 +1,114 @@
-import React, { useState } from "react";
-import { CVData } from "../types/cv";
+import React, { useState, useContext } from "react";
+import type { Experience } from "../types/cv.types";
+import { CVContext } from '../App';
+import './Form/PersonalInfo.css';
 
-interface Props {
-  cvData: CVData;
-  setCvData: React.Dispatch<React.SetStateAction<CVData>>;
-}
-
-const ExperienceInput: React.FC<Props> = ({ cvData, setCvData }) => {
-  const [experience, setExperience] = useState({
-    empresa: "",
-    cargo: "",
-    periodo: "",
-    descricao: "",
-    atual: false,
+const ExperienceInput: React.FC = () => {
+  const { state, setState } = useContext(CVContext);
+  const [experience, setExperience] = useState<Experience>({
+    id: '',
+    company: "",
+    role: "",
+    periodStart: "",
+    periodEnd: "",
+    current: false,
+    description: "",
   });
+  const [error, setError] = useState<string>("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value, type, checked } = e.target;
-    setExperience({
-      ...experience,
-      [name]: type === "checkbox" ? checked : value,
-    });
+    const { name, value, type } = e.target;
+    if (type === "checkbox") {
+      setExperience({
+        ...experience,
+        [name]: (e.target as HTMLInputElement).checked,
+      });
+    } else {
+      setExperience({
+        ...experience,
+        [name]: value,
+      });
+    }
   };
 
   const addExperience = () => {
-    if (!experience.empresa || !experience.cargo) return;
-
-    setCvData({
-      ...cvData,
-      experiencias: [...cvData.experiencias, experience],
-    });
-
-    // Resetar formulário
+    if (!experience.company || !experience.role) {
+      setError("Preencha os campos obrigatórios: Empresa e Cargo.");
+      return;
+    }
+    const newExperience = { ...experience, id: Math.random().toString(36).slice(2, 9) };
+    setState(prev => ({
+      ...prev,
+      experiences: [...prev.experiences, newExperience],
+    }));
     setExperience({
-      empresa: "",
-      cargo: "",
-      periodo: "",
-      descricao: "",
-      atual: false,
+      id: '',
+      company: "",
+      role: "",
+      periodStart: "",
+      periodEnd: "",
+      current: false,
+      description: "",
     });
+    setError("");
   };
 
-  const removeExperience = (index: number) => {
-    setCvData({
-      ...cvData,
-      experiencias: cvData.experiencias.filter((_, i) => i !== index),
-    });
+  const removeExperience = (id: string) => {
+    setState(prev => ({
+      ...prev,
+      experiences: prev.experiences.filter((exp) => exp.id !== id),
+    }));
   };
 
   return (
-    <div className="space-y-4">
+    <div className="form-container bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
       <div>
         <input
           type="text"
-          name="empresa"
+          name="company"
           placeholder="Empresa"
-          value={experience.empresa}
+          value={experience.company}
           onChange={handleChange}
           className="w-full border p-2 rounded mb-2"
         />
         <input
           type="text"
-          name="cargo"
+          name="role"
           placeholder="Cargo"
-          value={experience.cargo}
+          value={experience.role}
           onChange={handleChange}
           className="w-full border p-2 rounded mb-2"
         />
         <input
           type="text"
-          name="periodo"
-          placeholder="Período (ex: Jan/2020 - Dez/2022)"
-          value={experience.periodo}
+          name="periodStart"
+          placeholder="Início (ex: Jan/2020)"
+          value={experience.periodStart}
+          onChange={handleChange}
+          className="w-full border p-2 rounded mb-2"
+        />
+        <input
+          type="text"
+          name="periodEnd"
+          placeholder="Fim (ex: Dez/2022)"
+          value={experience.periodEnd}
           onChange={handleChange}
           className="w-full border p-2 rounded mb-2"
         />
         <textarea
-          name="descricao"
+          name="description"
           placeholder="Descrição das atividades"
-          value={experience.descricao}
+          value={experience.description}
           onChange={handleChange}
           className="w-full border p-2 rounded mb-2"
         />
         <label className="flex items-center space-x-2 mb-2">
           <input
             type="checkbox"
-            name="atual"
-            checked={experience.atual}
+            name="current"
+            checked={experience.current}
             onChange={handleChange}
           />
           <span>Trabalho Atual</span>
@@ -96,28 +116,31 @@ const ExperienceInput: React.FC<Props> = ({ cvData, setCvData }) => {
         <button
           type="button"
           onClick={addExperience}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="submit-button"
         >
           Adicionar Experiência
         </button>
+        {error && (
+          <div className="text-red-600 mt-2 text-sm">{error}</div>
+        )}
       </div>
 
       <ul className="space-y-2">
-        {cvData.experiencias.map((exp, index) => (
+        {state.experiences.map((exp) => (
           <li
-            key={index}
+            key={exp.id}
             className="border p-3 rounded flex justify-between items-start"
           >
             <div>
-              <p className="font-semibold">{exp.cargo} - {exp.empresa}</p>
-              <p className="text-sm text-gray-600">{exp.periodo}</p>
-              <p>{exp.descricao}</p>
-              {exp.atual && <p className="text-green-600 text-sm">(Emprego Atual)</p>}
+              <p className="font-semibold">{exp.role} - {exp.company}</p>
+              <p className="text-sm text-gray-600">{exp.periodStart} {exp.periodEnd && `- ${exp.periodEnd}`}</p>
+              <p>{exp.description}</p>
+              {exp.current && <p className="text-green-600 text-sm">(Emprego Atual)</p>}
             </div>
             <button
               type="button"
-              onClick={() => removeExperience(index)}
-              className="text-red-600 hover:underline ml-4"
+              onClick={() => removeExperience(exp.id)}
+              className="text-red-600 hover:underline ml-4 bg-gray-200 rounded"
             >
               Remover
             </button>
