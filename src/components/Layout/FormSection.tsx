@@ -1,13 +1,13 @@
-import { useState } from 'react'
+
 import PersonalInfo from '../Form/PersonalInfo'
 import Skills from '../Form/Skills'
 import Experience from '../Form/Experience'
 
 function FormSection() {
-	return (
-		<>
-			<h1>Codificaí</h1>
-
+  return (
+    <div className="flex flex-col p-8">
+      <h1 className="text-2xl font-bold mb-6">Monte seu curriculo </h1>
+      
 			<form className=""  autoComplete="off">
 				<PersonalInfo />
 				<Skills />
@@ -28,7 +28,7 @@ function FormSection() {
 	)
 }
 
-export default FormSection
+export default FormSection;
 
 const styles = `
 
