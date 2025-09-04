@@ -1,7 +1,7 @@
 
 import PersonalInfo from '../Form/PersonalInfo'
 import Skills from '../Form/Skills'
-import ExperienceInput from '../Form/ExperienceInput';
+import Experience from '../Form/Experience';
 
 function FormSection() {
 	return (
@@ -14,7 +14,7 @@ function FormSection() {
 					<h2 className="text-xl font-bold mt-6 mb-4">Habilidades</h2>
 					<Skills />
 					<h2 className="text-xl font-bold mt-6 mb-4">Experiências Profissionais</h2>
-					<ExperienceInput />
+					  <Experience />
 				</form>
 			</div>
 		</>
