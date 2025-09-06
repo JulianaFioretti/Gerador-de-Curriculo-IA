@@ -6,7 +6,7 @@ const SkillsSection: React.FC = () => {
   return (
     <section>
       <h3 className="text-lg font-semibold mb-3">Habilidades</h3>
-      <ul className="grid grid-cols-2 gap-2 text-sm text-slate-700">
+      <ul className="space-y-1 gap-2 text-sm text-slate-700">
         {state.skills.length === 0 ? (
           <li className="italic text-slate-400">Nenhuma habilidade adicionada.</li>
         ) : (
