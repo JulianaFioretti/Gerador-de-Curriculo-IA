@@ -11,6 +11,7 @@ ________________________________________________________________________________
 * Juliana Cristina Alves Fioretti
 * Edmilson Junior
 * Christal Camillo
+* Sarah Santana
 
 ## Gerador de Currículo Inteligente com Preview em Tempo Real
 
