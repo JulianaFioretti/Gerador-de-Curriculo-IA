@@ -23,3 +23,4 @@ const CVPreview: React.FC = () => {
 };
 
 export default CVPreview;
+
