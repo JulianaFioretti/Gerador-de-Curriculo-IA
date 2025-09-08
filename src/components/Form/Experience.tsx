@@ -63,7 +63,8 @@ const Experience: React.FC = () => {
 	};
 
 	return (
-		<div className="form-container bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+	<div className="form-container bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+			<h2 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-100">Experiências Profissionais</h2>
 			<div>
 				<input
 					type="text"
@@ -125,14 +126,14 @@ const Experience: React.FC = () => {
 				)}
 			</div>
 
-			<ul className="space-y-2">
+			<ul className="space-y-2 mt-4">
 				{state.experiences.map((exp) => (
 					<li
 						key={exp.id}
 						className="border p-3 rounded flex justify-between items-start"
 					>
 						<div>
-							<p className="font-semibold">{exp.role} - {exp.company}</p>
+							<p className="font-semibold text-gray-800">{exp.role} - {exp.company}</p>
 							<p className="text-sm text-gray-600">{exp.periodStart} {exp.periodEnd && `- ${exp.periodEnd}`}</p>
 							<p>{exp.description}</p>
 							{exp.current && <p className="text-green-600 text-sm">(Emprego Atual)</p>}
@@ -140,7 +141,7 @@ const Experience: React.FC = () => {
 						<button
 							type="button"
 							onClick={() => removeExperience(exp.id)}
-							className="text-red-600 hover:underline ml-4 bg-gray-200 rounded"
+							className="w-1/4 ml-4 bg-remove"
 						>
 							Remover
 						</button>

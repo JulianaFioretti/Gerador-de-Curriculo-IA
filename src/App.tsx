@@ -92,7 +92,7 @@ function App() {
         <div className="absolute top-26 right-8 z-50">
           <button
             onClick={handleClear}
-            className="bg-red-500 text-stole px-4 py-2 rounded shadow hover:bg-red-600 transition"
+            className="btn-clean"
             title="Limpar Currículo"
           >
             Limpar Currículo

@@ -54,7 +54,7 @@ const Skills: React.FC = () => {
   return (
     
     <div className="form-container bg-white p-6 rounded-lg shadow-md max-w-3xl w-full mx-auto">
-      <h2 className="text-xl font-semibold mb-4 text-center text-gray-700">
+  <h2 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-100">
         Habilidades
       </h2>
       <div>
@@ -66,7 +66,7 @@ const Skills: React.FC = () => {
           onChange={handleChange}
           className="w-full border p-2 rounded mb-2"
         />
-        <label className="block mb-2 text-sm font-medium text-gray-700">
+  <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-100">
           Nível da Habilidade:
           <select
             name="level"
@@ -102,7 +102,7 @@ const Skills: React.FC = () => {
             <button
               type="button"
               onClick={() => removeSkill(s.id)}
-              className="text-red-600 hover:underline ml-4 bg-gray-200 rounded p-1 text-sm"
+              className="w-1/4 ml-4 bg-remove"
             >
               Remover
             </button>

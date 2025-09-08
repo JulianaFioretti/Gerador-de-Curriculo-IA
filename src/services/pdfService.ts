@@ -2,6 +2,7 @@ import domtoimage from 'dom-to-image-more';
 import jsPDF from 'jspdf';
 
 export const generatePdf = async (element: HTMLElement, fileName: string): Promise<boolean> => {
+
   if (!element) {
     console.error("Erro: Elemento HTML não fornecido.");
     return false;
@@ -17,10 +18,20 @@ export const generatePdf = async (element: HTMLElement, fileName: string): Promi
     backgroundColor: '#ffffff',
   });
 
+  // Remove elementos marcados para ignorar na exportação
+  tempElement.querySelectorAll('[data-export-ignore]').forEach(el => el.remove());
+
+  // Remove todas as bordas e outlines dos elementos clonados
   tempElement.querySelectorAll<HTMLElement>('*').forEach(el => {
     el.style.border = 'none';
     el.style.outline = 'none';
+    el.style.boxShadow = 'none'; // Remove sombras que podem parecer bordas
   });
+
+  // Remove borda do próprio elemento raiz, se houver
+  tempElement.style.border = 'none';
+  tempElement.style.outline = 'none';
+  tempElement.style.boxShadow = 'none';
 
   document.body.appendChild(tempElement);
 

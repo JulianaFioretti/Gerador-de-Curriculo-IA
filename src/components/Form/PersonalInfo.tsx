@@ -45,6 +45,7 @@ function PersonalInfo() {
 
   return (
   <div className="form-container bg-white p-6 rounded-lg shadow-md max-w-3xl w-full mx-auto">
+    <h2 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-100">Informações Pessoais</h2>
       <p className="text-sm text-slate-500 mb-6">Informações básicas para contato</p>
       <form onSubmit= {handleSubmit(onSubmit)}>
         {/* ...restante do código do formulário... */}
