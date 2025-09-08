@@ -2,6 +2,7 @@ import Header from './components/Layout/Header';
 import React, { useEffect, useState, createContext } from 'react';
 import FormSection from './components/Layout/FormSection';
 import PreviewSection from './components/Layout/PreviewSection';
+import Footer from './components/Layout/Footer';
 import './index.css';
 import type { CVState } from './types/cv.types';
 
@@ -107,6 +108,7 @@ function App() {
             <PreviewSection />
           </div>
         </div>
+        <Footer />
       </div>
     </CVContext.Provider>
   );
