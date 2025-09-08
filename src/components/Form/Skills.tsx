@@ -55,7 +55,7 @@ const Skills: React.FC = () => {
     
     <div className="form-container bg-white p-6 rounded-lg shadow-md max-w-3xl w-full mx-auto">
   <h2 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-100">
-        Habilidades
+        Habilidades Técnicas
       </h2>
       <div>
         <input

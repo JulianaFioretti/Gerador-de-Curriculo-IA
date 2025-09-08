@@ -12,14 +12,14 @@ import { faGithub} from '@fortawesome/free-brands-svg-icons'
 import './PersonalInfo.css';
 
 function PersonalInfo() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm<PersonalInfoData>();
+  const { register, watch, formState: { errors } } = useForm<PersonalInfoData>();
   const [characterCount, setCharacterCount] = useState(0);
-  const { state, setState } = useContext(CVContext);
+  const { setState } = useContext(CVContext);
 
-  const onSubmit = (data: PersonalInfoData) => {
-    // Mantém para o botão salvar, mas preview já é atualizado em tempo real
-    alert('Informações salvas com sucesso!');
-  };
+  // const onSubmit = (data: PersonalInfoData) => {
+  //   // Mantém para o botão salvar, mas preview já é atualizado em tempo real
+  //   alert('Informações salvas com sucesso!');
+  // };
 
   // Atualização em tempo real do contexto
   React.useEffect(() => {
@@ -46,13 +46,13 @@ function PersonalInfo() {
   return (
   <div className="form-container bg-white p-6 rounded-lg shadow-md max-w-3xl w-full mx-auto">
     <h2 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-100">Informações Pessoais</h2>
-      <p className="text-sm text-slate-500 mb-6">Informações básicas para contato</p>
-      <form onSubmit= {handleSubmit(onSubmit)}>
+      <p className="text-sm text-slate-500 mb-6">Informações básicas para contato:</p>
+      <form >
         {/* ...restante do código do formulário... */}
         <div className = "form-group flex flex-col">
           <label htmlFor="name" className="text-sm font-medium text-slate-700 mb-1">
             <div className="flex items-center">
-              <FontAwesomeIcon icon={faUser} className="mr-2 text-slate-500" />
+              <FontAwesomeIcon icon={faUser} className="mr-1 text-slate-500" />
               <span>Nome Completo<span className="text-red-500">*</span></span>
             </div>
           </label>
@@ -69,7 +69,7 @@ function PersonalInfo() {
         <div className="form-group flex flex-col">
           <label htmlFor="email" className="text-sm font-medium text-slate-700 mb-1">
             <div className="flex items-center">
-              <FontAwesomeIcon icon={faEnvelope} color= "#696969"/>
+              <FontAwesomeIcon icon={faEnvelope} className="mr-1 text-slate-500"/>
               Email <span className="text-red-500">*</span>
             </div>
           </label>
@@ -91,8 +91,8 @@ function PersonalInfo() {
         <div className="form-group flex flex-col">
           <label htmlFor="phone" className="text-sm font-medium text-slate-700 mb-1">
             <div className="flex items-center">
-              <FontAwesomeIcon icon={faPhone} color= "#696969"/>
-              Telefone <span className="text-red-500">*</span>
+              <FontAwesomeIcon icon={faPhone} className="mr-1 text-slate-500"/>
+              Telefone<span className="text-red-500">*</span>
             </div>
           </label>
           <input
@@ -113,8 +113,7 @@ function PersonalInfo() {
         <div className="form-group flex flex-col">
           <label htmlFor="linkedin" className="text-sm font-medium text-slate-700 mb-1">
             <div className="flex items-center">
-              <FontAwesomeIcon icon={faLinkedin} color= "#696969"/>
-              LinkedIn
+              <FontAwesomeIcon icon={faLinkedin} className="mr-1 text-slate-500"/>LinkedIn
             </div>
           </label>
           <input
@@ -134,7 +133,7 @@ function PersonalInfo() {
         <div className="form-group flex flex-col">
           <label htmlFor="github" className="text-sm font-medium text-slate-700 mb-1">
             <div className="flex items-center">
-              <FontAwesomeIcon icon={faGithub} className="mr-2 text-slate-500" />
+              <FontAwesomeIcon icon={faGithub} className="mr-1 text-slate-500" />
               GitHub
             </div>
           </label>
@@ -169,7 +168,7 @@ function PersonalInfo() {
           </div>
           {errors.resume && <p className="error-message">{errors.resume.message}</p>}
         </div>
-        <button type="submit" className="submit-button">Salvar</button>
+        {/* <button type="submit" className="submit-button">Salvar</button> */}
       </form>
     </div>
   );

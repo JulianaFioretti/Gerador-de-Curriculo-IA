@@ -26,12 +26,21 @@ export const generatePdf = async (element: HTMLElement, fileName: string): Promi
     el.style.border = 'none';
     el.style.outline = 'none';
     el.style.boxShadow = 'none'; // Remove sombras que podem parecer bordas
+    el.style.color = '#000000'; // Garante que o texto seja preto correção para icones
   });
 
   // Remove borda do próprio elemento raiz, se houver
   tempElement.style.border = 'none';
   tempElement.style.outline = 'none';
   tempElement.style.boxShadow = 'none';
+  // tempElement.style.width = '210mm'; // Largura A4
+  // // tempElement.style.minHeight = '297mm'; // Altura A4
+  tempElement.style.padding = '20mm'; // Margem interna
+  tempElement.style.boxSizing = 'border-box'; // Inclui padding na largura/altura total
+  tempElement.style.fontSize = '12pt'; // Tamanho de fonte legível
+  tempElement.style.lineHeight = '1.4'; // Espaçamento entre linhas
+  // // tempElement.style.color = '#000000'; // Cor do texto
+  // // tempElement.style.backgroundColor = '#ffffff'; // Fundo branco
 
   document.body.appendChild(tempElement);
 

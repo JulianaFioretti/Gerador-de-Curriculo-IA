@@ -10,7 +10,7 @@ export default function Header() {
           <FontAwesomeIcon icon={faFileAlt} />
         </div>
         <div>
-          <h1 className="text-lg font-semibold">CV Builder AI</h1>
+          <h1 className="text-4xl font-semibold">CV Builder AI</h1>
           <p className="text-sm text-slate-500">
             [ Gerador de Currículo • Preview em tempo real ]
           </p>
