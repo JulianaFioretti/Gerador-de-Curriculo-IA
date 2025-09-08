@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import type { Experience as ExperienceType } from "../../types/cv.types";
-import { CVContext } from '../../App';
+import { useCVData } from '../../hooks/useCVData';
 import './PersonalInfo.css';
 
 const Experience: React.FC = () => {
-	const { state, setState } = useContext(CVContext);
+	const { state, setState } = useCVData();
 	const [experience, setExperience] = useState<ExperienceType>({
 		id: '',
 		company: "",

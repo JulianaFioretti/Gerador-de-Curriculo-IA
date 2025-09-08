@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import { CVContext } from '../../App';
+import React from 'react';
+import { useCVData } from '../../hooks/useCVData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const PersonalHeader: React.FC = () => {
-  const { state } = useContext(CVContext);
+  const { state } = useCVData();
   return (
     <div className="mb-4">
       <h2 className={`text-2xl font-bold ${!state.name ? 'text-slate-400 italic' : ''}`}>{state.name || 'Seu Nome Aqui'}</h2>

@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import type { Skill } from "../../types/cv.types";
-import { CVContext } from "../../App";
+import { useCVData } from "../../hooks/useCVData";
 import "./PersonalInfo.css";
 
 const Skills: React.FC = () => {
-  const { state, setState } = useContext(CVContext);
+  const { state, setState } = useCVData();
   const [skill, setSkill] = useState<Omit<Skill, "id">>({
     name: "",
     level: "Básico",
@@ -52,9 +52,8 @@ const Skills: React.FC = () => {
   };
 
   return (
-    
     <div className="form-container bg-white p-6 rounded-lg shadow-md max-w-3xl w-full mx-auto">
-  <h2 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-100">
+      <h2 className="text-xl font-semibold mb-4 text-center text-gray-700 dark:text-gray-100">
         Habilidades Técnicas
       </h2>
       <div>
@@ -66,7 +65,7 @@ const Skills: React.FC = () => {
           onChange={handleChange}
           className="w-full border p-2 rounded mb-2"
         />
-  <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-100">
+        <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-100">
           Nível da Habilidade:
           <select
             name="level"

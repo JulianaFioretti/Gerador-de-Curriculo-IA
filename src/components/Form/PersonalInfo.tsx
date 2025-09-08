@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import {useForm} from 'react-hook-form';
 import type { PersonalInfoData } from '../../types/cv.types';
-import { CVContext } from '../../App';
+import { useCVData } from '../../hooks/useCVData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser} from '@fortawesome/free-solid-svg-icons'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
@@ -11,10 +11,11 @@ import { faGithub} from '@fortawesome/free-brands-svg-icons'
 
 import './PersonalInfo.css';
 
+
 function PersonalInfo() {
-  const { register, watch, formState: { errors } } = useForm<PersonalInfoData>();
+  const { register, watch, formState: { errors } } = useForm<PersonalInfoData>({ mode: 'onBlur' });
   const [characterCount, setCharacterCount] = useState(0);
-  const { setState } = useContext(CVContext);
+  const { setState } = useCVData();
 
   // const onSubmit = (data: PersonalInfoData) => {
   //   // Mantém para o botão salvar, mas preview já é atualizado em tempo real

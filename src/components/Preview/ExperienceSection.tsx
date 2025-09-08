@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { CVContext } from '../../App';
+import React from 'react';
+import { useCVData } from '../../hooks/useCVData';
 
 const ExperienceSection: React.FC = () => {
-  const { state } = useContext(CVContext);
+  const { state } = useCVData();
   return (
     <section>
       <h3 className="text-lg font-semibold mb-3">Experiências</h3>
