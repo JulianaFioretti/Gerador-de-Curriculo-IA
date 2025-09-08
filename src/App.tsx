@@ -11,6 +11,7 @@ import ErrorBoundary from './components/UI/ErrorBoundary';
 import LoadingSpinner from './components/UI/LoadingSpinner';
 import ClearButton from './components/Layout/ClearButton';
 
+
 function ToastContainer() {
   const { toasts } = useToast();
   return (
@@ -32,12 +33,18 @@ function App() {
   }, []);
 
   // Enquanto carrega, mostra o spinner
+
   if (isLoading) {
-    return <LoadingSpinner />;
+    try {
+      return <LoadingSpinner />;
+    } catch (e) {
+      return <div className="flex items-center justify-center h-screen text-red-600">Erro ao carregar o app.</div>;
+    }
   }
 
   return (
     <ToastProvider>
+      <ToastContainer />
       <CVProvider>
         <ErrorBoundary>
           <div className="relative w-full h-full max-h-full">
@@ -55,7 +62,6 @@ function App() {
               </div>
             </div>
             <Footer />
-            <ToastContainer />
           </div>
         </ErrorBoundary>
       </CVProvider>
