@@ -12,25 +12,25 @@ const PersonalHeader: React.FC = () => {
       <div className="flex flex-col gap-1 mt-2 text-sm text-slate-600">
         {state.email && (
           <div className="flex items-center gap-2">
-            <FontAwesomeIcon icon={faEnvelope} className="text-blue-500" />
+            <FontAwesomeIcon icon={faEnvelope} className="text-slate-600" />
             <span>{state.email}</span>
           </div>
         )}
         {state.phone && (
           <div className="flex items-center gap-2">
-            <FontAwesomeIcon icon={faPhone} className="text-blue-500" />
+            <FontAwesomeIcon icon={faPhone} className="text-slate-600" />
             <span>{state.phone}</span>
           </div>
         )}
         {state.linkedin && (
           <div className="flex items-center gap-2">
-            <FontAwesomeIcon icon={faLinkedin} className="text-blue-500" />
+            <FontAwesomeIcon icon={faLinkedin} className="text-slate-600" />
             <a href={state.linkedin} target="_blank" rel="noopener noreferrer" className="hover:underline">{state.linkedin}</a>
           </div>
         )}
         {state.github && (
           <div className="flex items-center gap-2">
-            <FontAwesomeIcon icon={faGithub} className="text-blue-500" />
+            <FontAwesomeIcon icon={faGithub} className="text-slate-600" />
             <a href={state.github} target="_blank" rel="noopener noreferrer" className="hover:underline">{state.github}</a>
           </div>
         )}

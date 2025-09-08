@@ -42,6 +42,11 @@ export const generatePdf = async (element: HTMLElement, fileName: string): Promi
   // // tempElement.style.color = '#000000'; // Cor do texto
   // // tempElement.style.backgroundColor = '#ffffff'; // Fundo branco
 
+  // Remove sublinhado dos links
+  tempElement.querySelectorAll<HTMLAnchorElement>('a').forEach(link => {
+    link.style.textDecoration = 'none';
+  });
+
   document.body.appendChild(tempElement);
 
   try {

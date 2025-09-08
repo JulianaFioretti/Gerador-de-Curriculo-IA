@@ -1,9 +1,9 @@
 import Header from './components/Layout/Header';
-import React, { useEffect, useState, createContext, useContext } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 import FormSection from './components/Layout/FormSection';
 import PreviewSection from './components/Layout/PreviewSection';
 import './index.css';
-import type { CVState, Skill, Experience } from './types/cv.types';
+import type { CVState } from './types/cv.types';
 
 const initialState: CVState = {
   name: '',
